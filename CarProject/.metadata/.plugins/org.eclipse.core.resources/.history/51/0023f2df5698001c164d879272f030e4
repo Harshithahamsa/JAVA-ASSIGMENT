@@ -1,0 +1,22 @@
+package com.te.base.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.te.base.dao.AdminDao;
+import com.te.base.dto.Admin;
+
+@Service
+public class AdminServiceImp implements AdminService{
+
+	@Autowired
+	private AdminDao dao;
+
+	@Override
+	public Admin getAdmin(int id) {
+		
+		return dao.findByAdminId(id);
+	}
+	
+
+}

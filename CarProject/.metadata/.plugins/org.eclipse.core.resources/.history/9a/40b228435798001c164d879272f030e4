@@ -1,0 +1,10 @@
+package com.te.base.service;
+
+import com.te.base.dto.Admin;
+
+public interface AdminService {
+
+	public Admin getAdmin(int id);
+	
+	
+}

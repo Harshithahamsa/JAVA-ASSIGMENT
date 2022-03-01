@@ -1,0 +1,8 @@
+package com.te.base.service;
+
+import com.te.base.dto.CarDetails;
+
+public interface CarService {
+
+	public CarDetails getDetail(int id);
+}

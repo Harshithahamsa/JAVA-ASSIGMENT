@@ -1,0 +1,5 @@
+package com.te.base.jwt;
+
+public class JwtUtil {
+
+}

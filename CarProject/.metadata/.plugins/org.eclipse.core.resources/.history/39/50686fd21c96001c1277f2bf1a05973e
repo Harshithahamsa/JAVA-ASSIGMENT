@@ -1,0 +1,18 @@
+package com.te.base.dao;
+
+import javax.persistence.Entity;
+
+import com.te.base.dto.CarDetails;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class Admin {
+
+	private String a_username;
+	private String a_password;
+	
+	private CarDetails details;
+	
+}

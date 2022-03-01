@@ -1,0 +1,47 @@
+package com.te.base.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.te.base.dao.CarDao;
+import com.te.base.dto.CarDetails;
+
+@Service
+public class CarServiceImpl implements CarService{
+
+	@Autowired
+	private CarDao dao;
+	
+	@Override
+	public CarDetails getDetail(int id) {
+		
+		return dao.findByCarId(id);
+	}
+
+	@Override
+	public CarDetails addData(CarDetails details) {
+		
+		return dao.save(details);
+	}
+
+	@Override
+	public CarDetails updateData(CarDetails details) {
+		
+		return dao.save(details);
+		
+	}
+
+	@Override
+	public void deleteData(int id) {
+			CarDetails details=dao.findByCarId(id);
+                 dao.delete(details);
+	}
+	
+	
+	
+
+	
+
+	
+
+}
